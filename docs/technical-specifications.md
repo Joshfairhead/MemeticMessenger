@@ -46,35 +46,39 @@ Essential operations that enable the system:
   - Custom conditional rules
 
 ### 3. Supportive Platform
-Communication infrastructure matrix across scale and scope:
+Routing and delivery mechanisms across communication patterns:
 
-#### Scale & Scope Matrix
-The platform supports communication across three degrees of scale (individual, group, public) and two degrees of scope (short form, long form):
+#### Communication Routing Matrix
+The platform routes messages across three degrees of scale (individual, group, public) and two degrees of scope (short form, long form):
 
-**Short Form Communications:**
-- **Individual**: Text messaging - Direct person-to-person messages
-- **Group**: Group chat - Real-time multi-party conversations
-- **Public**: Twitter-style - Broadcast microblogging
+**Short Form Routing:**
+- **Individual**: Direct peer-to-peer message routing
+- **Group**: Multi-cast routing to defined member sets
+- **Public**: Broadcast routing with follower distribution
 
-**Long Form Communications:**
-- **Individual**: Email - Structured personal correspondence
-- **Group**: Bulletin board - Threaded group discussions
-- **Public**: Blog posts - Published articles and essays
+**Long Form Routing:**
+- **Individual**: Store-and-forward email-style routing
+- **Group**: Threaded discussion routing with subscription model
+- **Public**: Content distribution network for published articles
 
 
 ### 4. Necessary Resources
-Required components for system operation:
+Data models and structures required for system operation:
 
-- **Social Graph**: Network relationship mapping
-- **Address Book**: Contact management system
-- **Collections**: Custom thread organization within timelines
-- **Timeline**: Chronological message organization
-- **Workflows**: Automated process management
+- **Social Graph**: Relationship data model mapping user connections
+- **Address Book**: Contact data model with identity management
+- **Collections**: Thread organization data structures
+- **Timeline**: Chronological message data organization
+- **Workflows**: Process automation data models and state machines
 
 ### 5. Integrative Totality
-Holistic system capabilities:
+Holistic system interfaces and unified experiences:
 
 - **DHT (Distributed Hash Table)**: Decentralized data storage and retrieval system supporting all communication modes
+- **Unified Timeline Screen**: Integrated view across all communication types
+- **Conversation Screens**: Adaptive UI for different communication contexts
+- **Settings & Configuration Screen**: System-wide preference management
+- **Search & Discovery Interface**: Cross-modal content exploration
 
 ### 6. Inherent Values
 Core principles embedded in the system:
