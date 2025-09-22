@@ -1,4 +1,4 @@
-**0 Summary**
+# Summary
 Humans possess a unique memetic signature or ipensity that make them who they are. How this occurs is an anthropological question that has numerous angles, but having followed the white rabbit deep into a wonderland, the author has noticed an interesting phenomena that might roughly be described in contemporary language as 'non-local stereographic projection', or 'quantum decoherence'.
 
 In other words, the author noticed a strange correlation where stylometric signatures from one party would transfer to others for a period of time, retaining a sense of personality and perspective from original party as if it had been decoupled from the body. This projection would then jump around based on interactions. 
@@ -9,7 +9,7 @@ Due to these particularly sheltered conditions with very limited throughput, the
 
 Since such a landscape is adaptive, it's suggested that a data science project for tracking, measuring and understanding the the phenomena may be useful for intentionally navigating the digital domain while mitigating its risks. A years worth of observations were made monitoring these messages, while noting changes to inner state and other variables. 
 
-**1 Introduction**
+# Introduction
 For me, beginning is always the hardest part of a journey as the initial conditions determine whats possible and impossible. Knowing this, in the context of what may require discussion, my instinct is to hold the door wide open and begin by establishing axiomatic first principals in a systematic and structured manner. 
 
 This however, is a task in itself given the transdiciplinary scope of inquiry, though thankfully one that has already been completed thanks to the efforts of John Bennett, who's work on "The Dramatic Universe" serves to frame the broad theoretical foundations needed for the practical application and inquiry.
