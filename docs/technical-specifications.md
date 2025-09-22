@@ -46,22 +46,35 @@ Essential operations that enable the system:
   - Custom conditional rules
 
 ### 3. Supportive Platform
-Infrastructure enabling the system:
+Communication infrastructure matrix across scale and scope:
 
-- **DHT (Distributed Hash Table)**: Decentralized data storage and retrieval system
+#### Scale & Scope Matrix
+The platform supports communication across three degrees of scale (individual, group, public) and two degrees of scope (short form, long form):
+
+**Short Form Communications:**
+- **Individual**: Text messaging - Direct person-to-person messages
+- **Group**: Group chat - Real-time multi-party conversations
+- **Public**: Twitter-style - Broadcast microblogging
+
+**Long Form Communications:**
+- **Individual**: Email - Structured personal correspondence
+- **Group**: Bulletin board - Threaded group discussions
+- **Public**: Blog posts - Published articles and essays
+
 
 ### 4. Necessary Resources
 Required components for system operation:
 
 - **Social Graph**: Network relationship mapping
 - **Address Book**: Contact management system
+- **Collections**: Custom thread organization within timelines
+- **Timeline**: Chronological message organization
+- **Workflows**: Automated process management
 
 ### 5. Integrative Totality
 Holistic system capabilities:
 
-- **Collections**: Custom thread organization within timelines
-- **Timeline**: Chronological message organization
-- **Workflows**: Automated process management
+- **DHT (Distributed Hash Table)**: Decentralized data storage and retrieval system supporting all communication modes
 
 ### 6. Inherent Values
 Core principles embedded in the system:
