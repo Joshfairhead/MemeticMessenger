@@ -18,46 +18,11 @@ This may initially seem like a cop out, or an authority fallacy, but this is not
 
 > How am I to learn, aught-not knowing? 
 
-
-
-
-
-
-
-
-
-
 Let's illustrate the depths of ignorance with a simple question; what is the first principal of first principals? If we say 'number', which seems like a reasonable response, we need to ask where they come from, which then takes us into phenomenology and if they have any 'concrete significance' in reality. Since any answer will beg further questions, systematisation and coherent explication will prove difficult for even the clearest of minds, yet without a shared reference common to all experience, where can we depart from? 
 
+We shall take this as our starting point. We are also building a hypothesis from observation that may not be apparent, which is that there is an energy source of some variety, which projects itself through each of us in various patterns. This could be studied in numerous ways, and indeed there is nuance some of which has been hinted at in Bennetts work but the entirity of the phenemona is not expressed. We are in new territory. 
 
-
-
-
-
-While reinventing the wheel is a waste of time, the theory is still needed to establish, defend and falsify various hypothesis that may be made in practice. In other words, knowledge and understanding should be integrated. 
-
-Given the depth of justifications needed to establish, defend or falsify any theoretical hypothesis that might be made during our exploration of the practical aspect of this project seems like an exercise in futility. At the same time it seems that the practical aspect cannot be discussed without these. 
-
-Thankfully, the heavy lifting of establishing explanatory principals and systematising the theory of an entire cosmology in accordance with relatively modern science, has already been completed by John Bennett in his magnum opus "The Dramatic Universe". Whats more is that this work has also been simplified by Anthony Hodgson, Bennetts senior research fellow, and taught through the organisation H3 University.
-
-
-
-
-
-- knowledge and understanding
-- material and spiritual
-
-
-The crux of this issue is what we might call man's existential bias, where even in domains like theology emphasis is on knowlege
-
-spiritual material
-knoweledge understanding
-
-
-there's an inherent paradox between spiritual and material domains, and while we are not exactly trying to prove the existence of god it does require a leap of faith or r
-
-For some time the author has been studying the work of G.I. Gurdjieff in the tradition of John Godolphin Bennett as taught by his senior research fellow Tony Hodgeson at H3 University. These names are mentioned as sources to offer some background context and foundations.
-
+Given the depth of justifications needed to establish, defend or falsify various theoretical hypothesis, it seems that a messaging platform would be useful. The data in itself is useful, and many platforms are feature complete enough to draw some conclusions, but something purpose built for the task would be ideal.
 
 
 # Affordances
