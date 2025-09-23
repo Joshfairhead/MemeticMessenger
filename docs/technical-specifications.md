@@ -1,157 +1,99 @@
-# Technical Specifications - Complete Design Framework
+# Technical Specifications
 
-## Platform Design - Eight Core Facets
+## Overview
 
-### 1. Autonomous Unit
-**Atomic building blocks - the irreducible elements that carry meaning**
+This document defines the technical implementation details for the Memetic Messenger platform, building upon the design framework outlined in [design-specifications.md](./design-specifications.md).
 
-*The smallest complete unit of communication consisting of content payload, context envelope, and attachment potential.*
+## Architecture Questions
 
-**Implementation Components:**
-- **Text Fields**:
-  - Header (subject, title, group name)
-  - Body (content, message)
-- **Attach**
-- **Metadata**:
-  - Time
-  - Date
-  - Hashtag
+To build this platform in production, we need to clarify several technical implementation details:
 
-### 2. Critical Functions
-**Essential verbs - what users can do with communication units**
+### 1. Data Layer ✓
+- **Decision**: Holochain DHT/DAG - content addressable, local-first distributed architecture
+- **Implementation**: Built on weave.social Holochain framework
+- **Benefits**:
+  - Natural DAG structure for event history
+  - Content addressing for data integrity
+  - Local-first with P2P synchronization
+  - No central servers or databases needed
 
-*Core interaction capabilities: initiate communication, control flow, manage state, and verify delivery.*
+### 2. Communication Protocol ✓
+- **Decision**: Holochain zome-based applets with shared DHT space
+- **Implementation**:
+  - Each applet is a zome (or smaller module)
+  - All operate within weave.social DHT space
+  - Inter-zome function calls for direct communication
+  - Pub/sub event system for reactive updates
+- **Architecture**: Applets are perspectives on shared data:
+  - **Clock**: Time data perspective
+  - **Calendar**: Timeline perspective
+  - **Identity**: Personal timeline + profile perspective
+  - **Address Book**: Social graph perspective from identity viewpoint
+  - **Membrane Manager**: Groupoid perspective on social graph
+  - **Files/Communication/Dashboard**: Various data perspectives
 
-**Implementation Features:**
-- **Connect**
-  - Add / Remove / Block
-- **Screener**:
-  - Block
-  - Allow
-- **Compose**
-  - New
-  - Drafts
-- **Send**
-  - Schedule
-- **Receive**
-  - React
-  - Mark unread
-  - Snooze
-- **Reciepts**:
-  - Sent
-  - Recieved
-  - Read / Read by
-- **Edit / Update**
-- **Forward / Share**
-- **Search / Filter**
-  - Sender, time, date, tag, attachment, link etc.
+### 3. Identity & Authentication ✓
+- **Decision**: Multi-layered identity through Holochain + AD4M framework
+- **Identity Hierarchy**:
+  1. **DeepKey**: Foundational human identity (persistent across all systems)
+  2. **Agent Keys**: Cryptographic identities derived from DeepKey
+  3. **Personas**: Agent-side data/expressions (stored on source chain)
+  4. **Profiles**: App-side presentation fields (reconstructable across apps)
+- **Implementation**:
+  - DeepKey provides consistent identity foundation
+  - Agent keys access AD4M framework for expressions/languages/perspectives
+  - Personas enable different "voices" (personal, professional, etc.)
+  - Profiles are app-specific presentations of persona data
+- **Benefits**: Identity remains with progenitor (Josh) while allowing flexible agent expressions
+- **Scope**: Pure Holochain for simplicity (identity bridging via AD4M is future consideration)
 
-### 3. Supportive Platform
-**Data infrastructure - the foundational plumbing that enables communication**
+### 4. Networking Architecture ✓
+- **Decision**: Pure Holochain DHT networking
+- **Implementation**:
+  - Standard Holochain conductor and DHT protocols
+  - No additional infrastructure layers needed
+  - Entry through any weave.social DNA or ecosystem app
+- **Bootstrap**: Users can join through any existing entry point in the ecosystem
+- **Scope**: Desktop/web focus initially (mobile connectivity out of scope)
 
-*Core data models, routing systems, and technical infrastructure that supports all applications.*
+### 5. Data Synchronization ✓
+- **Decision**: Holochain's eventual consistency model with agent-relative time
+- **Implementation**:
+  - Event sequencing based on agent perspective (time is relative to agent)
+  - Cross-device sync via DeepKey → Agent Key relationship
+  - Shared source chain access for multiple devices under same identity
+  - CRDT-like behavior for concurrent modifications
+- **Conflict Resolution**:
+  - Rely on Holochain's CRDT mechanisms
+  - Consider single-writer constraints if conflicts become problematic
+- **Data Integrity**: Handled by Holochain DHT with local islands/hotspots that can resync
+- **Scope**: Holochain's eventual consistency handles synchronization needs
 
-**Control mechanisms** for context aware operations:
-  - Communication boundaries and social graph (Who?)
-  - Capability manager (Why?)
-  - Resource manager (What?)
-  - Spatial awareness and proximity detection (Where?)
-  - Time-based availability (When?)
-  - Conditional logic; workflows and automation (How?)
+### 6. Platform & Deployment ✓
+- **Decision**: Progressive Web App on Holoports with WASM compilation
+- **Frontend**:
+  - Use Holochain's built-in UI framework if available, otherwise consider Yew (Rust → WASM)
+  - Progressive Web App for cross-platform compatibility
+- **Deployment**:
+  - Runs on Holoports and served over web
+  - No desktop/mobile installation required
+- **Development Strategy**:
+  - Build incrementally based on dependencies (Clock → Calendar → Timeline, etc.)
+  - All applets likely needed for proper messaging (to replace OS-level contacts, etc.)
+- **Integration**: Leverage existing weave.social functionality where it suits our needs
 
-**Implementation Infrastructure:**
-- **Timeline**: Chronological message data organization
-- **Collections**: Thread organization data structures
-- **Social Graph**: Relationship data model mapping user connections
-- **Workflows**: Process automation data models and state machines
+## Implementation Priority
 
-Is this the 'weave.social'?
-
-### 4. Necessary Resources
-**Applications - the concrete tools users need to accomplish tasks**
-
-*User-facing applications that provide specific functionality within the communication ecosystem.*
-
-**Implementation Applications:**
-- **Clock**: Timestamps and scheduling
-- **Calendar**: Event planning and temporal organization
-- **Identity**: Personal identity and presence management
-  - Aliases
-  - Personas
-  - Profiles
-- **Address Book**: Contact management (Humans / Agents)
-- **Membrane Manager**: Contextual boundaries: Private, group, public. 
-- **Files**: Document and media storage system
-    - **Collections**:
-      - **Media Library**: Photos and videos
-      - **Meme Library**: Viral images
-      - **Sticker Library**: Visual communication assets
-- **Communication**: Messaging and conversation interfaces
-- **Dashboard**: Unified timeline and system overview
-
-### 5. Integrative Totality
-**Operating system/ecosystem - the unified environment that ties everything together**
-
-*Meta-layer providing unified experience, cross-app integration, and seamless transitions between all applications.*
-
-**Implementation Environment:**
-- **Universal Interface**: Consistent interaction patterns across all applications
-- **Cross-App Integration**: Seamless data flow and context sharing between applications
-- **Global Search & Discovery**: Cross-modal content exploration across entire ecosystem
-- **Unified State Management**: System-wide configuration and synchronization
-- **Context Switching**: Smooth transitions between different communication modes and applications
-- **System-Wide Notifications**: Coordinated alert and update system across all apps
-
-### 6. Inherent Values
-**Philosophical principles embedded in design**
-
-*Core values and principles the system fundamentally believes in and prioritizes.*
-
-**Design Principles:**
-- **Provenance**: Every communication event should be traceable and accountable
-- **Conversation Continuity**: Communication threads should maintain coherent state and context
-- **Contextual Awareness**: The system should understand and respond to spatial, temporal, and social context
-- **Cosmic Coherence**: It's not actually about messaging, or computers it's about expanding the scope of causal awareness. 
-
-### 7. Intrinsic Nature
-**Emergent qualities - characteristics that arise from system operation**
-
-*Natural system behaviors and capabilities that manifest from the design.*
-
-**Emergent Behaviors:**
-- **Composable Communication**: messages, groups, public square, mail, boards and blogs are composed from low level elements.
-- **Causal Communication**: Cause-and-effect relationships become trackable through relationships in a DAG.
-- **Ordered historical record of events**: Complete chronological record of all communication events naturally emerges
-  - Example flow: sent to Chris → sent to Bryan → delivered to Bryan → read by Bryan → delivered to Chris → emoji by Bryan → read by Chris → response by Chris → response by Bryan.
-- **Memetic/Stylographic Recognition**: Pattern identification of agents naturally develops based on:
-  - Language usage
-  - Communication perspectives
-  - Stylographic/Memetic signatures
-
-### 8. Organizational Modes
-**Taxonomic frameworks - how information gets categorized and accessed**
-
-*Communication scope frameworks defining scale dimensions, temporal dimensions, routing patterns, and context boundaries.*
-
-**Implementation Patterns:**
-Communication frameworks across three degrees of scale and two degrees of scope:
-
-**Scale Dimensions:**
-- **Individual**: Direct one-to-one communication patterns
-- **Group**: Defined member set communication patterns
-- **Public**: Open broadcast communication patterns
-
-**Scope Dimensions:**
-- **Short Form**: Ephemeral, immediate communication contexts
-- **Long Form**: Persistent, threaded communication contexts
-
-
-## Future Development
-
-The Memetic Messenger platform represents an intersection of practical communication needs and research objectives. By building a system that both serves user needs and generates analyzable data about communication patterns, we can advance our understanding of how human communication evolves in digital spaces.
+Based on dependencies and core messaging needs:
+1. **Clock** (timestamps)
+2. **Timeline/Calendar** (extends Clock naturally)
+3. **Identity** (required for all communication)
+4. **Social Graph/Address Book** (contact management)
+5. **Communication** (core messaging)
+6. **Membrane Manager** (contextual boundaries)
+7. **Files** (media/attachments)
+8. **Dashboard** (unified view)
 
 ---
 
-*Each layer builds upon the previous: atoms → actions → containers → persistence → integration → values → nature → organization*
-
-*This documentation is a living document and will be updated as the project evolves.*
+*This document will be expanded based on architectural decisions and implementation choices.*
