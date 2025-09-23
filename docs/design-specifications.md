@@ -81,7 +81,7 @@ Is this the 'weave.social'?
   - Profiles
 - **Address Book**: Contact management (Humans / Agents)
 - **Membrane Manager**: Contextual boundaries: Private, group, public. Social DNA / Cells.
-- **Files**: Document and media storage system
+- **Frames**: Document and media storage system
     - **Collections**:
       - **Media Library**: Photos and videos
       - **Meme Library**: Viral images
