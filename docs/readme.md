@@ -10,7 +10,7 @@ The platform aims to provide both a functional messaging system and a research f
 
 ### The Phenomenon
 
-Through extensive observation of digital communications under controlled conditions, a peculiar phenomenon has been identified: stylometric signatures appear to transfer between communicating parties, maintaining characteristics of the originating party even as they manifest in others. This effect, tentatively described as "non-local stereographic projection," suggests that communication patterns may have properties that transcend simple imitation.
+Through extensive observation of digital communications under controlled conditions, a peculiar phenomenon has been identified: stylometric signatures appear to transfer between communicating parties. This effect, tentatively described as "non-local stereographic projection," suggests that communication patterns may have properties that transcend simple imitation and are more like "quantumn decoherence patterns" - in other words 'real communication' follows some kind of causal chain and may be less direct than it is assumed! 
 
 ### Research Approach
 
@@ -18,7 +18,7 @@ To study this phenomenon systematically, a year-long observational study was con
 
 ### Theoretical Framework
 
-The theoretical foundation for this work draws from transdisciplinary sources, particularly the systematic approach developed by John Bennett in "The Dramatic Universe" and refined by Anthony Hodgson at H3 University. This framework provides the necessary conceptual tools for addressing the complex interplay between knowledge and understanding, material and spiritual dimensions of communication.
+The theoretical foundation for this work draws from transdisciplinary sources, particularly the systematic approach developed by John Bennett in "The Dramatic Universe" and refined by Anthony Hodgson at H3 University. This framework provides the initial conceptual tooling for addressing the complex interplay of phenomena using the qualitive significance of number. 
 
 ---
 
